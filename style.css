@@ -445,5 +445,81 @@ nav ul li a.active {
   }
   50% {
     transform: translateY(-15px);
+ }
+ }
+ @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar img {
+    width: 200px;
+    height: auto;
+  }
+
+  .skills-container,
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-tile {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .contact-details {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #0ff;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
   }
 }
